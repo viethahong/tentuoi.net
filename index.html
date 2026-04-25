@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây Dựng Thương Hiệu Cá Nhân | Cố Vấn Đồng Hành — Hạ Hồng Việt</title>
+    <meta name="description"
+        content="Đồng hành xây dựng tên tuổi bài bản cùng Hạ Hồng Việt — 13+ năm kinh nghiệm, công thức 4T độc quyền. Dịch vụ cố vấn cá nhân hóa cho chuyên gia và creator.">
+    <link rel="icon" type="image/png" href="txtt-logo-transparent.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#2C2C2A',
+                        warmwhite: '#F7F4EE',
+                        brandamber: '#FECA63',
+                        deepamber: '#E8B240',
+                        amberdark: '#C07800',
+                        amberdeeper: '#A86500',
+                        ambertint: '#FEF0CC',
+                        amberlight: '#FFFBF0',
+                        bordergray: '#E5E3DC',
+                        navyink: '#1C2B3A',
+                        graymuted: '#8C8B84',
+                    },
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    maxWidth: {
+                        'content': '1100px',
+                    },
+                    boxShadow: {
+                        'card': '0 4px 20px rgba(0,0,0,0.05)',
+                        'card-hover': '0 12px 30px rgba(0,0,0,0.08)',
+                        'pricing': '0 8px 32px rgba(28,43,58,0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+            /* Offset cho sticky nav */
+        }
+
+        body {
+            color: #2C2C2A;
+            background-color: #F7F4EE;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Animations */
+        .fade-up-element {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 400ms ease-out, transform 400ms ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-up-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-load {
+            opacity: 0;
+            animation: fadeIn 600ms ease-out 100ms forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Stagger Delays */
+        .delay-1 {
+            transition-delay: 80ms;
+        }
+
+        .delay-2 {
+            transition-delay: 160ms;
+        }
+
+        .delay-3 {
+            transition-delay: 240ms;
+        }
+
+        .delay-4 {
+            transition-delay: 320ms;
+        }
+
+        .delay-5 {
+            transition-delay: 400ms;
+        }
+
+        /* Custom Styles */
+        .nav-scrolled {
+            background-color: rgba(247, 244, 238, 0.85);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #E5E3DC;
+        }
+
+        .nav-link.active {
+            color: #C07800;
+            font-weight: 600;
+        }
+
+        /* Floating Zalo Button */
+        #zalo-floating {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 300ms ease-out;
+        }
+
+        #zalo-floating.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="font-sans relative">
+
+    <!-- Section 0: Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[64px] transition-all duration-300">
+        <div class="max-w-content mx-auto px-6 lg:px-0 h-full flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-[20px] font-bold text-charcoal tracking-tight">tentuoi.net</a>
+
+            <!-- Nav Links (Desktop) -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#dinh-nghia"
+                    class="nav-link text-[15px] font-medium text-charcoal hover:text-amberdark transition-colors">Tên
+                    tuổi là gì</a>
+                <a href="#cong-thuc-4t"
+                    class="nav-link text-[15px] font-medium text-charcoal hover:text-amberdark transition-colors">Công
+                    thức 4T</a>
+                <a href="#cach-dong-hanh"
+                    class="nav-link text-[15px] font-medium text-charcoal hover:text-amberdark transition-colors">Cách
+                    đồng hành</a>
+                <a href="#bang-gia"
+                    class="nav-link text-[15px] font-medium text-charcoal hover:text-amberdark transition-colors">Bảng
+                    giá</a>
+            </div>
+
+            <!-- CTA -->
+            <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer"
+                class="bg-brandamber hover:bg-deepamber text-charcoal font-semibold text-[14px] md:text-[15px] py-[10px] px-[20px] rounded-[8px] transition-all duration-200 ease-out hover:scale-[1.015]">
+                <span class="hidden md:inline">Liên hệ Zalo</span>
+                <span class="md:hidden">Zalo</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section
+        class="min-h-screen flex items-center justify-center pt-20 pb-16 relative bg-warmwhite overflow-hidden fade-in-load">
+        <!-- Background subtle texture/lines -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: repeating-linear-gradient(45deg, #2C2C2A 0, #2C2C2A 1px, transparent 0, transparent 50%); background-size: 20px 20px;">
+        </div>
+
+        <div class="max-w-content mx-auto px-6 lg:px-0 flex flex-col items-center text-center relative z-10 w-full">
+            <span class="text-graymuted text-[12px] md:text-[13px] uppercase tracking-[0.08em] font-medium mb-6">DỊCH VỤ
+                CỐ VẤN ĐỒNG HÀNH</span>
+
+            <h1 class="text-[32px] md:text-[48px] font-extrabold leading-[1.1] tracking-[-0.03em] mb-6">
+                <span class="text-charcoal block">Nổi tiếng thì quá tuyệt vời<br class="hidden md:block"> nhưng chưa
+                    đủ.</span>
+                <span class="text-amberdark block mt-2">Được tin tưởng mới là<br class="hidden md:block"> tên tuổi
+                    thật.</span>
+            </h1>
+
+            <p class="text-[16px] md:text-[17px] text-charcoal max-w-[580px] leading-[1.75] mb-10">
+                Tôi đồng hành cùng chuyên gia và creator xây dựng thương hiệu cá nhân có chiều sâu bằng phương pháp,
+                không phải may mắn.
+            </p>
+
+            <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer"
+                class="w-full md:w-auto bg-brandamber hover:bg-deepamber text-charcoal font-semibold text-[16px] py-[14px] px-[32px] rounded-[8px] transition-all duration-200 ease-out hover:scale-[1.015] mb-3">
+                Đăng ký đồng hành
+            </a>
+
+            <p class="text-graymuted text-[13px] mb-12">Nhắn tin Zalo để trao đổi trước khi quyết định</p>
+
+            <!-- Stats -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 pt-8 border-t border-bordergray/60 w-full max-w-[600px]">
+                <div class="text-center">
+                    <div class="text-[24px] font-bold text-charcoal">13+</div>
+                    <div class="text-[12px] font-medium text-graymuted uppercase tracking-wider mt-1">Năm kinh nghiệm
+                    </div>
+                </div>
+                <div class="hidden md:block w-px h-8 bg-bordergray"></div>
+                <div class="text-center">
+                    <div class="text-[24px] font-bold text-charcoal">13</div>
+                    <div class="text-[12px] font-medium text-graymuted uppercase tracking-wider mt-1">Frameworks độc
+                        quyền</div>
+                </div>
+                <div class="hidden md:block w-px h-8 bg-bordergray"></div>
+                <div class="text-center">
+                    <div class="text-[24px] font-bold text-charcoal">∞</div>
+                    <div class="text-[12px] font-medium text-graymuted uppercase tracking-wider mt-1">Đồng hành trọn đời
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
+                <i data-lucide="arrow-down" class="w-5 h-5 text-graymuted"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Định nghĩa -->
+    <section id="dinh-nghia" class="py-14 md:py-24 bg-white">
+        <div class="max-w-content mx-auto px-6 lg:px-0">
+            <div class="text-center max-w-[680px] mx-auto mb-16 fade-up-element">
+                <span class="text-graymuted text-[12px] font-medium uppercase tracking-[0.08em] block mb-3">GÓC NHÌN CỦA
+                    TÔI</span>
+                <h2 class="text-[24px] md:text-[32px] font-bold text-charcoal leading-[1.2] tracking-[-0.02em] mb-6">Hầu
+                    hết mọi người đang xây sai thứ.</h2>
+                <p class="text-[16px] md:text-[17px] text-charcoal leading-[1.75]">
+                    Khi ai đó hỏi tôi làm thế nào để xây thương hiệu cá nhân, tôi thường hỏi ngược lại: bạn muốn được
+                    biết đến, hay muốn được tin tưởng? Hai thứ đó rất khác nhau.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-[900px] mx-auto mb-16">
+                <!-- Cột trái -->
+                <div class="bg-warmwhite p-6 md:p-8 rounded-[12px] fade-up-element">
+                    <h3 class="text-[18px] md:text-[20px] font-semibold text-graymuted mb-6">Thương hiệu cá nhân là...
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Phải viral, phải nhiều view</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Phải xuất hiện thật nhiều trên
+                                mạng</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Phải có hàng trăm nghìn
+                                follower</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Phải được nhiều người biết đến</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cột phải -->
+                <div
+                    class="bg-ambertint p-6 md:p-8 rounded-[12px] border-l-[3px] border-brandamber fade-up-element delay-1">
+                    <h3 class="text-[18px] md:text-[20px] font-semibold text-amberdark mb-6">Tên tuổi thật sự là...</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Đúng người biết đến bạn, còn hơn cả
+                                triệu người không tin</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Người ta nhớ đến bạn khi cần đúng
+                                loại giá trị bạn mang lại</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Uy tín tích lũy qua thời gian, không
+                                phải qua một clip viral</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] md:text-[16px] text-charcoal">Mối quan hệ được xây có chủ
+                                đích</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="max-w-[680px] mx-auto text-center fade-up-element delay-2">
+                <blockquote
+                    class="text-[17px] md:text-[20px] font-light italic text-charcoal leading-[1.6] border-l-[4px] border-brandamber pl-6 mb-8 text-left inline-block w-full">
+                    "Tôi định nghĩa thương hiệu cá nhân là một hành trình xây dựng, phát triển bản thân một cách có chủ
+                    đích để đúng người tin tưởng bạn đúng lúc."
+                    <div class="text-[14px] font-medium text-graymuted mt-3 not-italic">— Hạ Hồng Việt</div>
+                </blockquote>
+                <p class="text-[16px] text-charcoal leading-[1.7] max-w-[580px] mx-auto">
+                    Đó là lý do tôi gọi công việc mình làm là 'Thợ Xây Tên Tuổi'. Không phải thợ làm viral. Không phải
+                    thợ chạy ads. Là người giúp bạn xây thứ bền.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Công thức 4T -->
+    <section id="cong-thuc-4t" class="py-14 md:py-24 bg-warmwhite">
+        <div class="max-w-content mx-auto px-6 lg:px-0">
+            <div class="text-center max-w-[680px] mx-auto mb-12 md:mb-16 fade-up-element">
+                <span class="text-graymuted text-[12px] font-medium uppercase tracking-[0.08em] block mb-3">PHƯƠNG
+                    PHÁP</span>
+                <h2 class="text-[24px] md:text-[32px] font-bold text-charcoal leading-[1.2] tracking-[-0.02em] mb-6">
+                    Công thức 4T — Bản đồ xây dựng tên tuổi</h2>
+                <p class="text-[16px] md:text-[17px] text-charcoal leading-[1.75]">
+                    Hầu hết người xây thương hiệu cá nhân thất bại không phải vì lười, mà vì không biết đang ở đâu và
+                    bước tiếp theo là gì. Công thức 4T cho bạn bản đồ đó.
+                </p>
+            </div>
+
+            <!-- Banner công thức -->
+            <div
+                class="bg-navyink text-white rounded-[12px] p-6 md:py-8 md:px-10 max-w-[600px] mx-auto text-center mb-16 fade-up-element shadow-pricing">
+                <div class="text-[20px] md:text-[24px] font-bold mb-2">
+                    (<span class="text-brandamber">T1</span> + <span class="text-brandamber">T2</span>) × <span
+                        class="text-brandamber">T3</span> = Kết quả
+                </div>
+                <div class="text-[14px] text-brandamber">Nếu T1 + T2 yếu mà T3 càng lớn, kết quả càng nguy hiểm.</div>
+            </div>
+
+            <!-- 4 Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- T1 -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-[12px] border-t-[4px] border-brandamber hover:bg-amberlight hover:-translate-y-1 transition-all duration-200 ease-out shadow-card hover:shadow-card-hover fade-up-element">
+                    <div class="text-[32px] font-extrabold text-amberdark mb-4">T1</div>
+                    <h3 class="text-[20px] md:text-[22px] font-semibold text-charcoal mb-3">Tài năng</h3>
+                    <p class="text-[15px] text-charcoal leading-[1.7] mb-5">
+                        Năng lực thật sự mà bạn có thể mang lại giá trị cho người khác. Không phải kỹ năng bạn tự hài
+                        lòng — mà kỹ năng người khác sẵn sàng trả tiền.
+                    </p>
+                    <div class="text-[14px] italic text-graymuted border-l-[2px] border-brandamber pl-3">
+                        "Bạn đang giỏi cái gì? Và ai cần điều đó?"
+                    </div>
+                </div>
+                <!-- T2 -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-[12px] border-t-[4px] border-brandamber hover:bg-amberlight hover:-translate-y-1 transition-all duration-200 ease-out shadow-card hover:shadow-card-hover fade-up-element delay-1">
+                    <div class="text-[32px] font-extrabold text-amberdark mb-4">T2</div>
+                    <h3 class="text-[20px] md:text-[22px] font-semibold text-charcoal mb-3">Tín nhiệm</h3>
+                    <p class="text-[15px] text-charcoal leading-[1.7] mb-5">
+                        Người ta có cảm thấy an toàn khi làm việc với bạn không? Uy tín không xây được trong 1 tuần —
+                        nhưng mất được trong 1 đêm.
+                    </p>
+                    <div class="text-[14px] italic text-graymuted border-l-[2px] border-brandamber pl-3">
+                        "Người biết bạn có tin bạn không?"
+                    </div>
+                </div>
+                <!-- T3 -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-[12px] border-t-[4px] border-brandamber hover:bg-amberlight hover:-translate-y-1 transition-all duration-200 ease-out shadow-card hover:shadow-card-hover fade-up-element delay-2">
+                    <div class="text-[32px] font-extrabold text-amberdark mb-4">T3</div>
+                    <h3 class="text-[20px] md:text-[22px] font-semibold text-charcoal mb-3">Tiếng tăm</h3>
+                    <p class="text-[15px] text-charcoal leading-[1.7] mb-5">
+                        Không chỉ 'biết' — mà Biết → Nhớ → Hiểu → Tin → Yêu. Tiếng tăm là khuếch đại T1 và T2, không
+                        phải thay thế chúng.
+                    </p>
+                    <div class="text-[14px] italic text-graymuted border-l-[2px] border-brandamber pl-3">
+                        "Đúng người có biết đến bạn chưa?"
+                    </div>
+                </div>
+                <!-- T4 -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-[12px] border-t-[4px] border-brandamber hover:bg-amberlight hover:-translate-y-1 transition-all duration-200 ease-out shadow-card hover:shadow-card-hover fade-up-element delay-3">
+                    <div class="text-[32px] font-extrabold text-amberdark mb-4">T4</div>
+                    <h3 class="text-[20px] md:text-[22px] font-semibold text-charcoal mb-3">Tài chính</h3>
+                    <p class="text-[15px] text-charcoal leading-[1.7] mb-5">
+                        Tài năng được thừa nhận phải được trả tiền. T4 là kết quả — nhưng cũng là nhiên liệu để tái đầu
+                        tư vào T1, T2, T3.
+                    </p>
+                    <div class="text-[14px] italic text-graymuted border-l-[2px] border-brandamber pl-3">
+                        "Bạn đang kiếm tiền từ tên tuổi của mình chưa?"
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="text-[16px] md:text-[17px] text-charcoal text-center max-w-[580px] mx-auto leading-[1.75] fade-up-element delay-4">
+                "Phần lớn người đến gặp tôi đang chạy T3 quá nhanh trong khi T1 và T2 chưa đủ. Tôi giúp bạn cân bằng lại
+                — và xây từ nền móng."
+            </div>
+
+            <div class="text-center mt-10 fade-up-element delay-5">
+                <a href="https://hahongviet.com/4Tgame/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 border-[2px] border-charcoal text-charcoal hover:bg-charcoal hover:text-white font-semibold text-[16px] py-[14px] px-[32px] rounded-[8px] transition-colors duration-200 ease-out hover:shadow-card-hover">
+                    <i data-lucide="gamepad-2" class="w-5 h-5"></i>
+                    Trải nghiệm Trò Chơi Tên Tuổi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Cách đồng hành -->
+    <section id="cach-dong-hanh" class="py-14 md:py-24 bg-white">
+        <div class="max-w-content mx-auto px-6 lg:px-0">
+            <div class="text-center max-w-[680px] mx-auto mb-16 fade-up-element">
+                <span class="text-graymuted text-[12px] font-medium uppercase tracking-[0.08em] block mb-3">QUY TRÌNH
+                    ĐỒNG HÀNH</span>
+                <h2 class="text-[24px] md:text-[32px] font-bold text-charcoal leading-[1.2] tracking-[-0.02em] mb-6">Tôi
+                    đồng hành cùng bạn như thế nào</h2>
+                <p class="text-[16px] md:text-[17px] text-charcoal leading-[1.75]">
+                    Đây không phải khóa học bạn tự học rồi tự làm. Tôi ngồi cùng bạn, phân tích vấn đề thật, và xây lộ
+                    trình phù hợp với bạn — không phải template có sẵn.
+                </p>
+            </div>
+
+            <!-- Stepper -->
+            <div class="max-w-[680px] mx-auto relative mb-16">
+                <!-- Line kết nối -->
+                <div
+                    class="absolute left-[20px] md:left-[24px] top-[24px] bottom-[24px] w-px border-l-[2px] border-dashed border-bordergray z-0">
+                </div>
+
+                <div class="space-y-10 relative z-10">
+                    <!-- Bước 1 -->
+                    <div class="flex gap-4 md:gap-6 fade-up-element">
+                        <div
+                            class="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-brandamber text-charcoal font-extrabold flex items-center justify-center shrink-0 text-[16px] md:text-[18px]">
+                            1</div>
+                        <div class="pt-2 md:pt-3">
+                            <h3
+                                class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-2 flex items-center gap-2">
+                                <i data-lucide="search" class="w-5 h-5 text-amberdark"></i> Chẩn đoán
+                            </h3>
+                            <p class="text-[15px] text-charcoal leading-[1.7]">Tôi hỏi để hiểu bạn đang ở đâu trong 4T.
+                                Vấn đề bạn nói thường không phải vấn đề thật — và tôi sẽ chỉ ra điểm mù.</p>
+                        </div>
+                    </div>
+                    <!-- Bước 2 -->
+                    <div class="flex gap-4 md:gap-6 fade-up-element delay-1">
+                        <div
+                            class="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-brandamber text-charcoal font-extrabold flex items-center justify-center shrink-0 text-[16px] md:text-[18px]">
+                            2</div>
+                        <div class="pt-2 md:pt-3">
+                            <h3
+                                class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-2 flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-amberdark"></i> Định vị
+                            </h3>
+                            <p class="text-[15px] text-charcoal leading-[1.7]">Bạn muốn được biết đến là ai? Trong mắt
+                                ai? Vì lý do gì? Định vị sai thì mọi nỗ lực phía sau đều lãng phí.</p>
+                        </div>
+                    </div>
+                    <!-- Bước 3 -->
+                    <div class="flex gap-4 md:gap-6 fade-up-element delay-2">
+                        <div
+                            class="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-brandamber text-charcoal font-extrabold flex items-center justify-center shrink-0 text-[16px] md:text-[18px]">
+                            3</div>
+                        <div class="pt-2 md:pt-3">
+                            <h3
+                                class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-2 flex items-center gap-2">
+                                <i data-lucide="route" class="w-5 h-5 text-amberdark"></i> Lộ trình
+                            </h3>
+                            <p class="text-[15px] text-charcoal leading-[1.7]">Dựa trên nguồn lực thực tế của bạn (thời
+                                gian, tiền, kênh), tôi đề xuất roadmap cụ thể — không phải lý thuyết.</p>
+                        </div>
+                    </div>
+                    <!-- Bước 4 -->
+                    <div class="flex gap-4 md:gap-6 fade-up-element delay-3">
+                        <div
+                            class="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-brandamber text-charcoal font-extrabold flex items-center justify-center shrink-0 text-[16px] md:text-[18px]">
+                            4</div>
+                        <div class="pt-2 md:pt-3">
+                            <h3
+                                class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-2 flex items-center gap-2">
+                                <i data-lucide="users" class="w-5 h-5 text-amberdark"></i> Thực thi có đồng hành
+                            </h3>
+                            <p class="text-[15px] text-charcoal leading-[1.7]">Bạn làm, tôi review. Tôi phản biện, bạn
+                                điều chỉnh. Mỗi tuần hoặc mỗi 2 tuần, tùy tiến độ.</p>
+                        </div>
+                    </div>
+                    <!-- Bước 5 -->
+                    <div class="flex gap-4 md:gap-6 fade-up-element delay-4">
+                        <div
+                            class="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-brandamber text-charcoal font-extrabold flex items-center justify-center shrink-0 text-[16px] md:text-[18px]">
+                            5</div>
+                        <div class="pt-2 md:pt-3">
+                            <h3
+                                class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-2 flex items-center gap-2">
+                                <i data-lucide="shield" class="w-5 h-5 text-amberdark"></i> Phòng thủ uy tín
+                            </h3>
+                            <p class="text-[15px] text-charcoal leading-[1.7]">Khi tên tuổi lớn dần, rủi ro cũng lớn
+                                dần. Tôi giúp bạn dự phòng — không phải chờ khủng hoảng mới xử lý.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Callout -->
+            <div
+                class="bg-ambertint border-l-[4px] border-brandamber p-5 md:py-6 md:px-8 rounded-[12px] max-w-[680px] mx-auto text-[16px] md:text-[17px] text-charcoal leading-[1.7] mb-16 fade-up-element">
+                "Tôi không hứa kết quả cụ thể trong thời gian cụ thể. Nhưng tôi cam kết: mỗi đồng bạn bỏ ra, tôi cố gắng
+                mang lại nhiều hơn bằng năng lực thật của mình."
+            </div>
+
+            <div class="text-center fade-up-element">
+                <h3 class="text-[20px] md:text-[22px] font-semibold text-charcoal mb-6">Đây là đồng hành, không phải:
+                </h3>
+                <ul class="inline-block text-left space-y-3">
+                    <li class="flex items-center gap-3 text-[15px] text-charcoal">
+                        <i data-lucide="x" class="w-5 h-5 text-graymuted"></i> Khóa học online tự học
+                    </li>
+                    <li class="flex items-center gap-3 text-[15px] text-charcoal">
+                        <i data-lucide="x" class="w-5 h-5 text-graymuted"></i> Tư vấn 1 buổi rồi thôi
+                    </li>
+                    <li class="flex items-center gap-3 text-[15px] text-charcoal">
+                        <i data-lucide="x" class="w-5 h-5 text-graymuted"></i> Dịch vụ làm thay (viết content, chạy ads)
+                    </li>
+                    <li class="flex items-center gap-3 text-[15px] text-charcoal">
+                        <i data-lucide="x" class="w-5 h-5 text-graymuted"></i> Công thức copy-paste cho mọi người
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Dành cho ai -->
+    <section class="py-14 md:py-24 bg-warmwhite">
+        <div class="max-w-content mx-auto px-6 lg:px-0">
+            <div class="text-center max-w-[680px] mx-auto mb-16 fade-up-element">
+                <span class="text-graymuted text-[12px] font-medium uppercase tracking-[0.08em] block mb-3">PHÙ HỢP VỚI
+                    AI</span>
+                <h2 class="text-[24px] md:text-[32px] font-bold text-charcoal leading-[1.2] tracking-[-0.02em]">Dịch vụ
+                    này có phù hợp với bạn không?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[900px] mx-auto mb-16">
+                <!-- Dành cho -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-[12px] border-t-[4px] border-brandamber shadow-card fade-up-element">
+                    <h3 class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-6">Dành cho bạn nếu...</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-charcoal leading-[1.6]">Bạn là chuyên gia, freelancer, hoặc
+                                creator đang muốn xây tên tuổi bài bản</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-charcoal leading-[1.6]">Bạn hiểu rằng uy tín cần thời gian —
+                                và bạn sẵn sàng đầu tư dài hạn</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-charcoal leading-[1.6]">Bạn muốn có phương pháp rõ ràng, không
+                                muốn mày mò một mình</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-charcoal leading-[1.6]">Bạn muốn người đồng hành thẳng thắn,
+                                chỉ ra vấn đề thật — dù có thể không dễ nghe</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-charcoal leading-[1.6]">Bạn đã có chuyên môn, chỉ thiếu chiến
+                                lược để đúng người biết đến bạn</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Không dành cho -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-[12px] border-t-[4px] border-bordergray shadow-card fade-up-element delay-1">
+                    <h3 class="text-[18px] md:text-[20px] font-semibold text-charcoal mb-6">Không dành cho bạn nếu...
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-[#6B6B6B] leading-[1.6]">Bạn muốn nổi tiếng nhanh mà không
+                                quan tâm đến uy tín thật sự</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-[#6B6B6B] leading-[1.6]">Bạn muốn tôi làm thay — viết content,
+                                chạy ads, quản lý kênh</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-[#6B6B6B] leading-[1.6]">Bạn muốn công thức copy-paste, không
+                                muốn tư duy chiến lược</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-[#6B6B6B] leading-[1.6]">Bạn không sẵn sàng đầu tư thời gian
+                                và tiền bạc vào bản thân</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-graymuted shrink-0 mt-[2px]"></i>
+                            <span class="text-[15px] text-[#6B6B6B] leading-[1.6]">Bạn đang tìm giải pháp tắt đường,
+                                không muốn làm nền móng</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center fade-up-element delay-2">
+                <p class="text-[16px] md:text-[17px] italic text-charcoal max-w-[580px] mx-auto leading-[1.7] mb-4">
+                    "Tôi có thể giúp rất tốt cho người đúng. Nhưng tôi không thể giúp tất cả mọi người. Nếu bạn đọc cột
+                    trái và thấy mình ở đó — chúng ta nên nói chuyện."
+                </p>
+                <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer"
+                    class="text-amberdark hover:text-amberdeeper text-[15px] font-medium underline underline-offset-4 transition-colors">
+                    Nhắn tin Zalo để trao đổi thêm
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Bảng giá -->
+    <section id="bang-gia" class="py-14 md:py-24 bg-white">
+        <div class="max-w-content mx-auto px-6 lg:px-0">
+            <div class="text-center max-w-[680px] mx-auto mb-16 fade-up-element">
+                <span class="text-graymuted text-[12px] font-medium uppercase tracking-[0.08em] block mb-3">ĐẦU
+                    TƯ</span>
+                <h2 class="text-[24px] md:text-[32px] font-bold text-charcoal leading-[1.2] tracking-[-0.02em] mb-6">
+                    Chọn cách đồng hành phù hợp</h2>
+                <p class="text-[16px] md:text-[17px] text-charcoal leading-[1.75]">
+                    Hai gói có quyền lợi như nhau. Sự khác biệt chỉ ở thời gian và cam kết. Gói trọn đời phù hợp nếu bạn
+                    xác định đây là hành trình dài.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto mb-10">
+                <!-- Gói tháng -->
+                <div class="bg-white border border-bordergray rounded-[12px] p-7 md:p-10 fade-up-element flex flex-col">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block bg-warmwhite text-graymuted text-[11px] font-semibold uppercase tracking-[0.08em] px-3 py-1.5 rounded-[4px] mb-4">LINH
+                            HOẠT</span>
+                        <div class="flex items-end gap-2 mb-2">
+                            <span
+                                class="text-[32px] md:text-[40px] font-extrabold text-charcoal leading-none">10.000.000đ</span>
+                            <span class="text-[16px] text-graymuted pb-1">/ tháng</span>
+                        </div>
+                        <p class="text-[14px] text-charcoal mt-4 h-[42px]">Đồng hành từng tháng, gia hạn tùy ý.</p>
+                    </div>
+
+                    <div class="flex-grow">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-charcoal leading-[1.5]">Phân tích vị trí hiện tại trong
+                                    công thức 4T</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-charcoal leading-[1.5]">Xây lộ trình định vị cá nhân
+                                    hóa</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-charcoal leading-[1.5]">Review và phản biện chiến lược
+                                    định kỳ</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-charcoal leading-[1.5]">Hỗ trợ xử lý tình huống phát
+                                    sinh</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-charcoal leading-[1.5]">Dự phòng rủi ro uy tín</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-amberdark shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-charcoal leading-[1.5]">Không giới hạn câu hỏi trong thời
+                                    gian đồng hành</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer"
+                        class="w-full block text-center border-[2px] border-charcoal text-charcoal hover:bg-charcoal hover:text-white font-semibold text-[15px] py-[14px] px-[24px] rounded-[8px] transition-colors duration-200 ease-out">
+                        Đăng ký gói tháng
+                    </a>
+                </div>
+
+                <!-- Gói trọn đời -->
+                <div
+                    class="bg-navyink text-white rounded-[12px] p-7 md:p-10 shadow-pricing fade-up-element delay-1 flex flex-col relative z-10 scale-100 md:scale-[1.02]">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block bg-brandamber text-charcoal text-[11px] font-bold uppercase tracking-[0.08em] px-3 py-1.5 rounded-[4px] mb-4">CAM
+                            KẾT DÀI HẠN</span>
+                        <div class="flex items-end gap-2 mb-2">
+                            <span
+                                class="text-[32px] md:text-[40px] font-extrabold text-brandamber leading-none">118.000.000đ</span>
+                            <span class="text-[16px] text-white/60 pb-1">/ trọn đời</span>
+                        </div>
+                        <div class="text-[13px] text-white/50 mb-3">(Tương đương ~9.8 triệu/tháng nếu đồng hành 1 năm)
+                        </div>
+                        <p class="text-[14px] text-white/90 mt-2 h-[42px]">Đồng hành không giới hạn thời gian. Tôi ở đây
+                            khi bạn cần, suốt hành trình.</p>
+                    </div>
+
+                    <div class="flex-grow">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brandamber shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-white/90 leading-[1.5]">Tất cả quyền lợi của Gói
+                                    Tháng</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brandamber shrink-0 mt-[2px]"></i>
+                                <span class="text-[14px] text-white/90 leading-[1.5] font-medium text-white">Không cần
+                                    gia hạn — đồng hành vĩnh viễn</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer"
+                        class="w-full block text-center bg-brandamber hover:bg-deepamber text-charcoal font-semibold text-[15px] py-[14px] px-[24px] rounded-[8px] transition-colors duration-200 ease-out">
+                        Đăng ký gói trọn đời
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-[13px] text-graymuted text-center max-w-[600px] mx-auto fade-up-element delay-2">
+                "Tôi chỉ đồng hành song song tối đa 5 người cùng lúc để đảm bảo chất lượng. Nếu đang kín slot, tôi sẽ
+                thông báo trước."
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 7: FAQ -->
+    <section id="faq" class="py-14 md:py-24 bg-warmwhite">
+        <div class="max-w-content mx-auto px-6 lg:px-0">
+            <div class="text-center max-w-[680px] mx-auto mb-16 fade-up-element">
+                <span class="text-graymuted text-[12px] font-medium uppercase tracking-[0.08em] block mb-3">CÂU HỎI
+                    THƯỜNG GẶP</span>
+                <h2 class="text-[24px] md:text-[32px] font-bold text-charcoal leading-[1.2] tracking-[-0.02em]">Những
+                    điều bạn có thể đang thắc mắc</h2>
+            </div>
+
+            <div class="max-w-[720px] mx-auto fade-up-element delay-1" x-data="{ activeAccordion: null }">
+
+                <!-- Q1 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 1 ? null : 1"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Tôi không có nhiều
+                            thời gian, đồng hành này có phù hợp không?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 1 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 1" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Chúng ta không làm thêm việc cho bạn — chúng ta làm đúng việc. Đồng hành này giúp bạn dừng
+                            lại những thứ lãng phí thời gian và tập trung vào thứ thật sự tạo ra kết quả. Review định kỳ
+                            có thể chỉ 1-2 giờ/tuần, tùy giai đoạn.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 2 ? null : 2"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Bạn sẽ làm gì cụ thể
+                            cho tôi trong mỗi tháng?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 2 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 2" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Tùy giai đoạn — nhưng thông thường: 1-2 buổi trao đổi/review (online hoặc trực tiếp), phản
+                            biện content/chiến lược khi bạn cần, và hỗ trợ xử lý tình huống phát sinh. Không có lịch
+                            cứng ngắc — linh hoạt theo tiến độ thật của bạn.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 3 ? null : 3"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Sự khác biệt thật sự
+                            của gói trọn đời là gì?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 3 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 3" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Gói trọn đời không giới hạn thời gian — có nghĩa là 5 năm sau, 10 năm sau, khi bạn gặp vấn
+                            đề, tôi vẫn ở đây. Đây là cam kết đồng hành dài hạn, không phải gói có hạn dùng. Quyền lợi
+                            giống gói tháng, chỉ khác ở sự cam kết và tính kinh tế khi nhìn dài hạn.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 4 ? null : 4"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Tôi chưa biết mình có
+                            đủ 'chuyên gia' để xây thương hiệu chưa?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 4 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 4" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Câu hỏi đúng. Đó chính xác là thứ chúng ta sẽ chẩn đoán ở bước đầu. Nhiều người có nhiều hơn
+                            họ nghĩ — nhưng chưa biết cách nhìn thấy. Một số người thì cần xây thêm trước khi truyền
+                            thông. Tôi sẽ nói thẳng với bạn dù câu trả lời là gì.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 5 ? null : 5"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Nếu không hài lòng thì
+                            sao?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 5 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 5" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Tôi không có chính sách hoàn tiền cứng — vì đồng hành là quá trình hai chiều, kết quả phụ
+                            thuộc vào cả hai. Nhưng nếu bạn cảm thấy chúng ta không phù hợp sau tháng đầu, hãy nói thẳng
+                            với tôi. Tôi sẽ trao đổi thật để tìm cách tốt nhất cho bạn.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 6 ? null : 6"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Tôi có thể gặp trực
+                            tiếp không?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 6 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 6" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Tôi ở Hà Nội. Đồng hành chủ yếu online (Zalo, call, video call) để linh hoạt về thời gian.
+                            Nếu bạn cũng ở Hà Nội và cần gặp trực tiếp cho những buổi quan trọng — có thể sắp xếp.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="border-b border-bordergray py-5">
+                    <button @click="activeAccordion = activeAccordion === 7 ? null : 7"
+                        class="w-full flex items-center justify-between text-left focus:outline-none">
+                        <span class="text-[16px] md:text-[18px] font-semibold text-charcoal pr-4">Làm thế nào để bắt
+                            đầu?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-graymuted shrink-0 transition-transform duration-250 ease-out"
+                            :class="activeAccordion === 7 ? 'rotate-180' : ''"></i>
+                    </button>
+                    <div x-show="activeAccordion === 7" x-collapse x-cloak>
+                        <div class="pt-4 text-[15px] md:text-[16px] text-charcoal leading-[1.7]">
+                            Nhắn tin Zalo cho tôi. Chúng ta sẽ có 1 buổi trao đổi ngắn để tôi hiểu bạn đang ở đâu, và
+                            bạn hiểu tôi có thể giúp được gì. Không mất phí cho buổi này.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Final CTA + Footer -->
+    <div class="bg-navyink text-white">
+        <!-- CTA Block -->
+        <section class="py-16 md:py-24 px-6 lg:px-0 text-center max-w-content mx-auto fade-up-element">
+            <h2 class="text-[28px] md:text-[36px] font-bold text-white leading-[1.2] tracking-[-0.02em] mb-6">Nếu bạn
+                đọc đến đây, bạn đã biết.</h2>
+            <p class="text-[16px] md:text-[17px] text-white/80 leading-[1.7] max-w-[560px] mx-auto mb-10">
+                Biết rằng xây tên tuổi không phải chuyện may rủi. Biết rằng có phương pháp, có người đồng hành, sẽ nhanh
+                hơn và ít lãng phí hơn. Câu hỏi còn lại là: bạn có muốn bắt đầu không?
+            </p>
+            <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer"
+                class="inline-block w-full md:w-auto bg-brandamber hover:bg-deepamber text-charcoal font-semibold text-[17px] py-[16px] px-[40px] rounded-[8px] transition-all duration-200 ease-out hover:scale-[1.015] mb-4">
+                Nhắn tin Zalo ngay
+            </a>
+            <p class="text-[13px] text-white/50">Tôi trả lời trong vòng 24 giờ.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/10 py-8 px-6 lg:px-0">
+            <div
+                class="max-w-content mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] text-white/50">
+                <div class="text-center md:text-left">
+                    <div class="font-bold text-white/80 text-[16px] mb-1">tentuoi.net</div>
+                    <div>Hạ Hồng Việt — Thợ Xây Tên Tuổi</div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://sellator.net" target="_blank" rel="noopener noreferrer"
+                        class="text-white/60 hover:text-brandamber transition-colors">sellator.net</a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <div class="mb-2">© 2026 Hạ Hồng Việt / Sellator. All rights reserved.</div>
+                    <div class="italic text-white/40">Trang này không chạy quảng cáo. Bạn ở đây vì ai đó giới thiệu hoặc
+                        tự tìm đến.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Zalo CTA -->
+    <a href="https://zalo.me/0962184224" target="_blank" rel="noopener noreferrer" id="zalo-floating"
+        class="fixed bottom-6 right-6 w-14 h-14 z-40 hover:-translate-y-1 transition-transform duration-200 block shadow-[0_8px_20px_rgba(0,104,255,0.4)] rounded-full overflow-hidden"
+        aria-label="Chat Zalo">
+        <img src="Logo-Zalo-Arc.webp" alt="Zalo" class="w-full h-full object-cover">
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Sticky Nav and Scrolling
+            const navbar = document.getElementById('navbar');
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const zaloFloating = document.getElementById('zalo-floating');
+
+            const handleScroll = () => {
+                const scrollY = window.scrollY;
+
+                // Sticky Nav styling
+                if (scrollY > 64) {
+                    navbar.classList.add('nav-scrolled');
+                    navbar.classList.remove('bg-transparent');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                    navbar.classList.add('bg-transparent');
+                }
+
+                // Floating Zalo Button (show after hero)
+                if (scrollY > window.innerHeight * 0.8) {
+                    zaloFloating.classList.add('is-visible');
+                } else {
+                    zaloFloating.classList.remove('is-visible');
+                }
+
+                // Active Nav Link highlighting
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    // Add an offset to account for sticky nav and early activation
+                    if (scrollY >= (sectionTop - 100)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // init on load
+
+            // 2. Intersection Observer for Fade-up animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Trigger only once
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up-element');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
